@@ -7,6 +7,7 @@ const inputEl = document.querySelector('#validation-input');
     this.classList.remove('invalid');
   } else {
     this.classList.add('invalid');
+    this.classList.remove('valid');
   };
 });
 

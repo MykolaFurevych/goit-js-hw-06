@@ -3,13 +3,14 @@
 const formEl = document.querySelector(".login-form");
 formEl.addEventListener('submit', event => {
   event.preventDefault();
-  const {elements: { email, password }} = event.currentTarget;
-    if (email.value === '' || password.value === '') {
+  const  email = formEl.elements.email.value;
+  const  password = formEl.elements.password.value;
+    if (email === '' || password === '') {
         alert('Всі поля мають бути заповнені!');
     }
     else {
-        console.log(`{email: ${email.value}, password: ${password.value}}`);
+        console.log({email, password});
     }
-       formEl.reset();
+       event.target.reset();
 });
 
